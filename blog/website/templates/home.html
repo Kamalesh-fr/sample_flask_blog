@@ -1,0 +1,15 @@
+{% extends "posts_div.html" %} {% block title %}Home{% endblock %}
+{% for post in posts %}
+<div class="card border-dark">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <a href="/posts/{{post.author}}">{{post.author}}</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.content}}</p>
+  </div>
+  <div class="card-footer text-muted">{{post.date_created}}</div>
+</div>
+<br />
+{% endfor %}
+
