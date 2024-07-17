@@ -1,4 +1,11 @@
-requirements
+Simple blog website in python using flask
+
+Steps:
+Install python extension in Vscode
+
+Create Virtual environment(venv)
+
+requirements to install(already in requirements.txt file)
 
 pip install flask
 
