@@ -15,3 +15,5 @@ pip install datetime
 pip install pytz
 
 pip install faker
+
+pip install faker
