@@ -42,3 +42,4 @@ class Like(db.Model):
     date_created = db.Column(db.DateTime(timezone=True), default=current_time_ist)
     author = db.Column(db.Integer, db.ForeignKey('user.id', ondelete="CASCADE"), nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey('post.id', ondelete="CASCADE"), nullable=False)
+
