@@ -1,31 +1,33 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
-    %}
-    <form method="POST">
-      <h3 align="center">Login</h3>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          class="form-control"
-          placeholder="Enter Email"
-        />
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          class="form-control"
-          placeholder="Enter Password"
-        />
-        <br />
-        <div align="center">
-          <button class="btn btn-primary" type="submit">Login</button>
-        </div>
-      </div>
-                    <br>
-        Need An Account? <a class="ml-2 link" href="{{ url_for('auth.sign_up') }}">Sign Up Now</a>
-    </small>
-    </form>
-    {% endblock %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<form method="POST">
+  <h3 align="center">Login</h3>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="Enter Email"
+    />
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-control"
+      placeholder="Enter Password"
+    />
+    <br />
+    <div align="center">
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>
+  </div>
+  <div class="align-center">
+    <p class="mb-0">Need an account? <a class="link" href="{{ url_for('auth.sign_up') }}">Sign Up Now</a></p>
+    <p>Forgot Password? <a class="link" href="{{ url_for('auth.forgot_password') }}">Reset Here</a></p>
+  </div>
+</form>
+{% endblock %}

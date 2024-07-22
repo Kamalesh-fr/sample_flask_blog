@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Verify OTP{% endblock %}
+{% block content %}
+<form method="POST">
+    <h3 align="center">Verify OTP</h3>
+    <div class="form-group">
+        <label for="otp">OTP</label>
+        <input
+          type="text"
+          id="otp"
+          name="otp"
+          class="form-control"
+          placeholder="Enter OTP"
+        />
+        <br />
+        <label for="password">New Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          placeholder="Enter New Password"
+        />
+        <br />
+        <div align="center">
+          <button class="btn btn-primary" type="submit">Reset Password</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
